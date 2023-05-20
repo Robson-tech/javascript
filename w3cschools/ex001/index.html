@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            iframe {
+                border-style: dotted;
+                width: 100%;
+                height: 500px;
+            }
+        </style>
+    </head>
+<body>
+    <h1>Onde usar JavaScript</h1>
+    <iframe name="frame" src="script-body.html" frameborder="1"></iframe>
+    <ul>
+        <li><a href="script-body.html" target="frame">Exemplo body</a></li>
+        <li><a href="script-head.html" target="frame">Exemplo head</a></li>
+        <li><a href="script-external.html" target="frame">Exemplo external</a></li>
+    </ul>
+    <p>Todos os exemplos utilizam uma função declarada em JavaScript para alterar a mensagem na tag &lt;p&gt;.</p>
+    <pre><code>function mensagem() {
+    document.getElementById('demo').innerHTML = 'Hello, World!'
+}</code></pre>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                background-color: lightgray;
+            }
+
+            main {
+                position: relative;
+                background-color: white;
+                margin: 0 auto;
+                width: 60%;
+            }
+
+            main > img {
+                display: block;
+            }
+
+            main > div#caixa {
+                border: 1px solid black;
+                width: 220px;
+                height: 220px;
+            }
+
+            main > div#caixa > img#cleiton {
+                display: block;
+                width: 220px;
+            }
+        </style>
+    </head>
+<body>
+    <main>
+        <h1>Meu primeiro JavaScript</h1>
+        <button type="button" onclick="document.getElementById('demo1').innerHTML = Date()">Clique para ver hora e data</button>
+        <div id="demo1"></div>
+
+        <h2>O que JavaScript pode fazer?</h2>
+        <p id="demo2">JavaScript pode alterar o conteúdo de um elemento.</p>
+        <button type="button" onclick="document.getElementById('demo2').innerHTML = 'Hello, World!'">Clique aqui!</button>
+        <p>JavaScript aceita aspas 'simples' e "duplas".</p>
+
+        <p>JavaScript pode alterar os valores dos atributos nos elementos HTML.</p>
+        <img id="image" src="img/fox.png">
+        <button type="button" onclick="document.getElementById('image').src = 'img/horse.png'">Cavalo</button>
+        <button type="button" onclick="document.getElementById('image').src = 'img/wolf.png'">Lobo</button>
+        <button type="button" onclick="document.getElementById('image').src = 'img/fox.png'">Raposa</button>
+
+        <p id="demo3">JavaScript pode também alterar os estilos dos elementos HTML.</p>
+        <button type="button" onclick="document.getElementById('demo3').style.fontSize = '3em'">Clique para aumentar tamanho da fonte</button>
+        <button type="button" onclick="document.getElementById('demo3').style.fontSize = '1em'">Clique para diminuir tamanho da fonte</button>
+
+        <div id="caixa">
+            <img src="img/cleiton-rasta.jpg" alt="Fazer a galera deboxar legal" id="cleiton">
+        </div>
+        <button type="button" onclick="document.getElementById('cleiton').style.display = 'none'">Suma Cleiton!</button>
+        <button type="button" onclick="document.getElementById('cleiton').style.display = 'block'">Apareça Cleiton!</button>
+    </main>
+</body>
+</html>
