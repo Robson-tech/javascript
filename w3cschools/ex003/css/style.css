@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 1.5em;
+    height: 70px;
+    padding: 10px;
+}
+
+header > button#menu-hamburguer {
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+header > nav {
+    visibility: hidden;
+    overflow: hidden;
+    transition: .6s;
+}
+
+header > nav > ul {
+    display: flex;
+    gap: .5em;
+    list-style-type: none;
+}
+
+header > nav > ul > li > a {
+    text-decoration: none;
+    color: inherit;
+    padding: .5rem;
+}
+
+header > nav > ul > li > a:hover {
+    background-color: red;
+}
+
+header > nav.active {
+    visibility: visible;
+    justify-content: baseline;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background-color: black;
+    width: 100%;
+    height: calc(100vh - 70px);
+}
+
+header > nav.active > ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+header > nav.active > ul > li {
+    width: 100%;
+}
+
+header > nav.active > ul > li > a {
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 5px 0;
+}
