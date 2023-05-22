@@ -22,22 +22,39 @@ section#login {
     border-radius: 10px;
     background-color: white;
     width: 340px;
-    height: 470px;
     padding: 30px;
     transform: translate(-50%);
+}
+
+section#login img {
+    display: block;
+    margin: auto;
 }
 
 section#login h2, section#login p {
     font-weight: 100;
 }
 
-section#login button[type="button"] {
+section#login h2 {
+    text-align: center;
+    line-height: 1.1em;
+}
+
+section#login p {
+    text-align: justify;
+    margin: 20px 0;
+}
+
+section#login a#botao {
+    display: block;
     border: none;
     border-radius: 5px;
     background-color: var(--azul);
     color: white;
+    text-align: center;
+    text-decoration: none;
     font-size: 1.2em;
     font-weight: 100;
     width: 100%;
-    padding: 15px;
+    padding: 10px;
 }
