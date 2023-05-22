@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Operadores</h2>
+    <p id="demo"></p>
+    <script>
+        var nome, sobrenome, data_nasc, peso, altura;
+        nome = 'Robson';
+        sobrenome = 'Júnior';
+        data_nasc = '2002-07-27';
+        peso = 59.8;
+        altura = 1.73;
+        // window.alert(nome + ' ' + sobrenome);
+        // document.write(nome + ' ' + sobrenome);
+        document.getElementById('demo').innerHTML = `Meu nome é ${nome} ${sobrenome}. Nascí em ${data_nasc}, peso ${peso}kg e tenho ${altura}m de altura.`;
+    </script>
+</body>
+</html>
