@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/calculadora.css" media="all">
+</head>
+<body>
+    <main>
+        <form action="" method="post">
+            <input type="text" name="tela" id="itela">
+            <div id="botoes">
+                <input type="button" value="1">
+                <input type="button" value="2">
+                <input type="button" value="3">
+                <input type="button" value="4">
+                <input type="button" value="5">
+                <input type="button" value="6">
+                <input type="button" value="7">
+                <input type="button" value="8">
+                <input type="button" value="9">
+                <input type="button" value="0">
+                <input type="button" value="+" class="operadores">
+                <input type="button" value="-" class="operadores">
+            </div>
+            <input type="button" value="Enter">
+            <input type="button" value="Apagar">
+        </form>
+    </main>
+    <script>
+        let tela = document.getElementById('itela');
+        let botoes = document.querySelectorAll('#botoes input');
+        let apagar = document.querySelector('input[value="Apagar"]');
+        let somar = document.querySelector('input[value="+"]');
+        let subtrair = document.querySelector('input[value="-"]');
+        let valor = '';
+
+        for(let i = 0; i < botoes.length; i++){
+            botoes[i].addEventListener('click', function(){
+                if (valor.length < 10)
+                {
+                    valor += botoes[i].value;
+                    tela.value = valor;
+                    console.log(valor);
+                }
+            });
+        }
+
+        apagar.addEventListener('click', function(){
+            valor = '';
+            tela.value = valor;
+        });
+        somar.addEventListener('click', function(){
+            valor += somar.value;
+            tela.value = valor;
+        });
+    </script>
+</body>
+</html>

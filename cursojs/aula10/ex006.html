@@ -8,13 +8,27 @@
     <link rel="stylesheet" href="css/style.css" media="all">
 </head>
 <body>
-    <div id="area" onclick="clique()">
-        <p id="paragrafo">Parágrafo...</p>
-    </div>
+    <main>
+        <div id="area1" onclick="clique()"></div>
+        <div id="area2" onmouseover="over()" onmouseleave="leave()"></div>
+    </main>
     <script>
+        var a;
+        a = document.querySelector('div#area2');
+        a.addEventListener('click', clique);
+        a.addEventListener('mouseenter', over);
+        a.addEventListener('mouseleave', leave);
+
         function clique() {
-            var a = document.querySelector('p#paragrafo');
-            a.innerHTML = 'Clicou!';
+            a.style.background = 'lightblue';
+        }
+
+        function over() {
+            a.style.background = 'darkred';
+        }
+
+        function leave() {
+            a.style.background = 'hotpink';
         }
     </script>
 </body>
