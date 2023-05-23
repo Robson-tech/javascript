@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <link rel="stylesheet" href="css/style.css" media="all">
+</head>
+<body>
+    <header>
+        <div id="caixa">
+            <button type="button" onclick="aumenta()">Clique aqui!</button>
+        </div>
+        <div id="itens">
+            <ul>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#">Informações</a></li>
+                <li><a href="#">História</a></li>
+                <li><a href="#">Configurações</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <h1>Título</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius culpa veritatis eveniet quae dolores iste animi quidem minima ducimus itaque in, debitis placeat suscipit dolorum omnis, provident maiores sequi amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum fuga ducimus cupiditate dolor natus maxime dolorem a omnis, assumenda, corrupti, repudiandae facilis saepe commodi cum! Nobis repudiandae necessitatibus totam iste! Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem voluptatum praesentium in accusantium vitae distinctio, ipsam cupiditate, provident, commodi maiores tempore expedita. Quasi dolorum pariatur quam at quisquam nobis hic?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam quas sint perspiciatis quod, illo aperiam distinctio eius quasi? Dolorem dolore similique adipisci quod minima ipsum reiciendis mollitia incidunt minus inventore! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque consequatur saepe praesentium, recusandae nobis, sed incidunt cupiditate consectetur exercitationem voluptatem ea sunt similique nam nemo porro at omnis dolorem ullam?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet animi hic perspiciatis cum, enim deserunt nam at unde, voluptatibus quod assumenda suscipit! Nostrum mollitia exercitationem, rem dolor perspiciatis atque ex? Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit modi perferendis sint distinctio doloremque, quas qui perspiciatis error hic accusantium voluptatem doloribus sed. Voluptas libero, officiis adipisci laboriosam illo voluptates?</p>
+    </main>
+    <script>
+        /*
+            JavaScript DOM métodos:
+            document.getElementByTagName()
+            document.getElementById()
+            document.getElementByName()
+            document.getElementByClassName()
+            document.querySelector()
+        */
+       var p = window.document.getElementsByTagName('p')[0];
+
+        function aumenta() {
+            var header = document.getElementsByTagName('header')[0];
+            header.classList.toggle('aumento');
+        }
+
+        window.document.write('<strong>' + window.document.URL + '</strong><br>' + p.innerHTML);
+    </script>
+</body>
+</html>

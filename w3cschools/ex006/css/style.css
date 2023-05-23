@@ -1,0 +1,192 @@
+@charset "utf-8";
+
+:root {
+    --bg-header: #C4D2EB;
+    --bg-mensagem: #EFF3FA;
+    --cor-fonte: #1a5092;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background: white url("../img/bg-xadrez.jpg") repeat scroll center;
+    font-size: .9em;
+}
+
+body {
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 1100px;
+    margin: auto;
+    padding: 0 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+/* ----------------- Cabeçalho ----------------- */
+
+header {
+    position: relative;
+    background-color: var(--bg-header);
+    height: 150px;
+    margin-bottom: 15px;
+}
+
+div#topo {
+    border-bottom: 3px solid #D99C44;
+    background-image: linear-gradient(to top, #333E68, #272f4e);
+    color: white;
+    padding: 3px;
+}
+
+header > div#mensagem {
+    position: absolute;
+    bottom: 0;
+    background-color: var(--bg-mensagem);
+    width: 100%;
+    padding: 15px;
+}
+
+header > div#mensagem > p {
+    text-align: center;
+}
+
+header > div#mensagem > p > strong#atencao {
+    color: red;
+}
+
+/* ----------------- Menu ----------------- */
+
+menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3px;
+}
+
+menu > div {
+    background-color: var(--bg-mensagem);
+    text-align: center;
+    padding: 10px;
+}
+
+menu > div > strong {
+    display: block;
+    color: var(--cor-fonte);
+}
+
+/* ----------------- Escopo Principal ----------------- */
+
+main {
+    margin-top: 40px;
+}
+
+main > p {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+main > p > a {
+    text-decoration: none;
+    color: var(--cor-fonte);
+    font-weight: bold;
+}
+
+main > p > a:hover {
+    color: black;
+}
+
+main > div#login {
+    background-color: var(--bg-header);
+    width: 570px;
+    height: 225px;
+    margin: 0 auto 40px;
+    padding: 1px;
+}
+
+main > div#login > p {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 5px;
+}
+
+main > div#login > form, main > div#login > div#gov {
+    background-color: var(--bg-mensagem);
+    padding: 20px;
+}
+
+main > div#login > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 3px;
+}
+
+main > div#login > form > input[type="submit"] {
+    border: 1px solid darkgray;
+    border-radius: 0;
+    padding: 3px 7px;
+}
+
+main > div#login > div#gov {
+    text-align: center;
+}
+
+main > div#login > div#gov > a {
+    border: 1px solid var(--cor-fonte);
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding: 12px;
+}
+
+main > div#login > div#gov > a > i {
+    font-size: 1.4em;
+    transform: translate(0, 6px);
+}
+
+main > div#cadastros {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto 50px;
+}
+
+main > div#cadastros > p {
+    text-align: center;
+}
+
+main > div#cadastros > p > img#img1 {
+    width: 16px;
+}
+
+main > div#cadastros > p > a, main > div#footer > p > a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main > div#footer {
+    width: 70%;
+    margin: 0 auto 30px;
+}
+
+main > div#footer > p > img {
+    width: 23px;
+    transform: translate(0, 6px);
+}
+
+/* ----------------- Rodapé ----------------- */
+
+footer {
+    border-top: 3px solid #D99C44;
+    background-color: var(--cor-fonte);
+    text-align: center;
+    color: white;
+    width: 100%;
+    padding: 5px;
+}

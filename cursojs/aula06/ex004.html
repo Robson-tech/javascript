@@ -7,27 +7,15 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Exercício 003</h1>
-    <button type="button" onclick="soma()">Soma</button>
-    <button type="button" onclick="usuario()">Usuário</button>
+    <h1>Texto</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ipsa nihil eius voluptas vitae dicta adipisci recusandae commodi nam id suscipit enim, dolorum architecto nobis, at dolore non omnis maxime? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, odit harum. Ipsum fugiat sit aspernatur numquam, veritatis eaque illum minima cumque cupiditate velit at nostrum voluptate error qui! Eos, accusamus? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae officiis quisquam quam omnis sapiente asperiores nobis hic. Molestiae deleniti atque delectus? Labore excepturi fugiat sapiente deserunt quae perspiciatis ipsum explicabo?</p>
+    <button type="button" onclick="limpar()">Limpar</button>
     <script>
-        /*
-        var n1 = Number.parseInt(window.prompt("Informe um número"))
-        var n2 = Number.parseInt(window.prompt("Informe outro número"))
-        */
-        function soma() {
-            var n1 = Number(window.prompt("Informe um número"))
-            var n2 = Number(window.prompt("Informe outro número"))
-            soma = n1 + n2
-            // window.alert("O resultado da soma é " + soma.toString() + ".")
-            window.alert("O resultado da soma é " + String(soma) + ".")
-        }
+        var nome = window.prompt("Seu nome é?")
+        document.write(`${nome} está acessando a internet. ${nome} tem ${nome.length} caracteres.`)
 
-        function usuario() {
-            var nome = window.prompt("Digite seu nome")
-            var idade = window.prompt("Digite sua idade")
-            var nota = window.prompt("Digite sua nota")
-            window.alert(`Usuário de nome ${nome}, idade ${idade} e nota ${nota}.`) // Template Strings - placeholders ${} com interpolação
+        function limpar() {
+            document.write(`Novo documento`)
         }
     </script>
 </body>

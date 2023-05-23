@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <main class="cinza">
+        <article>
+            <h1>Título</h1>
+            <p><sup>Lorem ipsum dolor sit amet consectetur adipisicing elit.</sup> Ipsum nemo ratione nesciunt eius accusamus, aliquam modi et magnam quos ad laborum assumenda nulla quasi nam facilis, excepturi quia deleniti explicabo. <strong>Lorem ipsum dolor sit amet consectetur adipisicing elit.</strong> Incidunt, numquam fugit suscipit minus a velit repellendus ab tempora explicabo porro ipsa odit, corporis perferendis illum saepe. <sub>Provident beatae rerum repudiandae?</sub> Lorem ipsum, dolor sit amet consectetur adipisicing elit. <em>Facere omnis eum eos hic non minima consequatur, eveniet tempore odit quos id delectus velit vero asperiores explicabo praesentium repellendus!</em> Nihil, aliquid?</p>
+            <p class="cinza">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis modi provident nihil iure! Libero odio consectetur odit, iure porro soluta, numquam, fuga quo adipisci magnam suscipit voluptates quod illo delectus? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus velit, dolorem libero natus iusto soluta et totam cumque quisquam eaque ab officia voluptas magni voluptates nulla repudiandae delectus in eos.</p>
+            <p name="paragrafo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur quisquam dolorem, dolorum ipsum, laboriosam assumenda facere deserunt aut nam accusantium quasi laudantium dignissimos veritatis id velit reiciendis repudiandae qui dolores? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam soluta incidunt quia sint dolorum eligendi cum sed, repellendus, asperiores eveniet tempora aspernatur fugit, impedit amet! Corporis, laudantium iure! Soluta, numquam?</p>
+        </article>
+    </main>
+    <hr>
+    <script>
+        var titulo, p, all_p, name_p, classe;
+        titulo = window.document.querySelector('h1');
+        p = window.document.querySelector('p');
+        all_p = window.document.querySelectorAll('p');
+        name_p = document.getElementsByName('paragrafo')[0];
+        // classe = document.querySelector('main.cinza');
+        classe = document.getElementsByClassName('cinza')[1];
+        // document.write(titulo.innerText);
+        document.write(p.innerText + '<hr>');
+        document.write(p.innerHTML);
+        // document.write(window.navigator.appName)
+        titulo.style.backgroundColor = 'red';
+        p.style.backgroundColor = 'blue';
+        all_p[1].style.backgroundColor = 'green';
+        name_p.style.color = 'yellow';
+        classe.style.backgroundColor = 'purple';
+        p.innerText = window.document.URL;
+    </script>
+</body>
+</html>
